@@ -6,7 +6,7 @@ document.getElementById("contact-form").addEventListener("submit", async (event)
     const phone = document.getElementById("phone").value;
     const message = document.getElementById("message").value;
 
-    const response = await fetch("<YOUR_AZURE_FUNCTION_URL>", {
+    const response = await fetch("https://strataclipsecontact.azurewebsites.net/api/sendemailfunction", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
