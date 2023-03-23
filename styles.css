@@ -43,15 +43,21 @@ nav {
 }
 
 .main-link {
-    background-color: #FE8039;
+    background-color: #D04839;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 4px;
 }
 
-.main-link:hover {
-    background-color: #D97031;
+.main-link:hover,
+.main-link:focus {
+    background-color: #A03D36;
+    outline: none;
+}
+
+.main-link:focus {
+    box-shadow: 0 0 0 2px #A03D36;
 }
 
 footer {
@@ -59,7 +65,6 @@ footer {
     justify-content: center;
     gap: 10px;
     padding: 20px;
-    background-color: #333;
 }
 
 footer a {
@@ -67,6 +72,50 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
+footer a:hover,
+footer a:focus {
     text-decoration: underline;
+}
+
+footer a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 30px auto;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 5px;
+    border: 1px solid #A03D36;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+}
+
+form button {
+    background-color: #A03D36;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: none;
+}
+
+form button:hover, form button:focus {
+    background-color: #8B342F;
+    outline: none;
+}
+
+form button:focus {
+    box-shadow: 0 0 0 2px #8B342F;
 }
